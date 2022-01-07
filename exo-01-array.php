@@ -10,25 +10,24 @@ Affichez le nom de la carte qui à été retirée.
 */
 require __DIR__. '/vendor/autoload.php';
 
-$cartes = [
+$carte = [
     'as pique',
     'as carreau',
     'as coeur',
     'as treffle',
     'roi coeur'
 ];
-dump($cartes);
+dump($carte);
 
-$tirerCarte = array_splice($cartes,0, 3);
-dump($tirerCarte);
+$tirage = random_int(1,5);
+dump($tirage);
 
-$eniemeCarte = array_pop($tirerCarte);
+$tirageCarte = array_splice($carte,0,3);
+dump($tirageCarte);
 
-echo "la carte {$eniemeCarte} a été retiré <br>\n";
+echo "La carte tirée est la {$tirage}, {$tirageCarte[0]}.<br>\n";
 
-dump($cartes);
 
-$cartes = random_int(1,3,);
 
 
 
