@@ -19,10 +19,10 @@ $carte = [
 ];
 dump($carte);
 
-$tirage = random_int(1,5);
+$tirage = random_int(1, 5);
 dump($tirage);
 
-$tirageCarte = array_splice($carte,0,3);
+$tirageCarte = array_splice($carte, $tirage -1, 1);
 dump($tirageCarte);
 
 echo "La carte tirée est la {$tirage}, {$tirageCarte[0]}.<br>\n";
