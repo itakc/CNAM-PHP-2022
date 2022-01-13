@@ -79,6 +79,34 @@ if (!in_array('carottes', $biglist)){
 }
 
 
+$data = [
+    'nom' =>'lorem',
+    'prenom' =>'toto',
+    'age' =>'18',
+    'email' =>'toto.lorem@example.com',
+    'newsletter' =>'true',
+
+];
+
+dump ($data);
+//accès en lecture
+echo "email: {$data['email']}";
+
+//accès en écriture
+$data['age'] = 12;
+
+//ajout d'un couple clé valeur
+$data['spammer'] = true;
+
+//suppresion d'un couple de clé valeur
+unset($data['spammer']);
+
+//
+
+
+
+
+
 
 
 
