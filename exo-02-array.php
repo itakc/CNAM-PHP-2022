@@ -30,8 +30,8 @@ $cartes = [
 
 $tailleTab = count($cartes);
 
-$tirage1 = random_int(1, $tailleTab);
-$tirage2 = random_int(1, $tailleTab);
+$tirage1 = random_int(0, $tailleTab-1);
+$tirage2 = random_int(0, $tailleTab-1);
 
 $tirages = [];
 
@@ -52,9 +52,9 @@ dump($carte1);
 dump($carte2);
 
 $valCarte1 = (int) $carte1[0];
-$valCarte2 = (int) $carte2[1];
+$valCarte2 = (int) $carte2[0];
 
-if($valCarte1 > $valCarte2 || $valCarte1 == 1)
+if($valCarte1 > $valCarte2 || $valCarte1 == 0)
 {
     echo "La carte $carte1 est supérieur à la carte $carte2";
 } 
