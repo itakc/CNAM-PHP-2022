@@ -37,10 +37,8 @@ $tirages = [];
 
 array_push($tirages, $tirage1, $tirage2);
 
-if($tirage1 == $tirage2){ echo 'Vous avez tiré le même nombre'; exit();}
-
-$carte1 = array_splice($cartes, $tirage1-1, 1);
-$carte2 = array_splice($cartes, $tirage1-1, 1);
+$carte1 = array_splice($cartes, $tirage1-1,1);
+$carte2 = array_splice($cartes, $tirage2-1,1);
 
 $carte1 = $carte1[0];
 $carte2 = $carte2[0];
@@ -54,17 +52,27 @@ dump($carte2);
 $valCarte1 = (int) $carte1[0];
 $valCarte2 = (int) $carte2[0];
 
-if($valCarte1 > $valCarte2 || $valCarte1 == 0)
+if($valCarte1 == $valCarte2)
+
 {
-    echo "La carte $carte1 est supérieur à la carte $carte2";
-} 
-elseif($valCarte2 < $valCarte1 || $valCarte2 == 1)
-{
-    echo "La carte $carte1 est supérieur à la carte $carte2";
-} 
-elseif($valCarte1 == $valCarte2){
+
     echo "la carte $carte1 et $carte2 sont équivalentes";
-} 
+
+}
+
+elseif($valCarte2 < $valCarte1 || $valCarte2 == 1)
+
+{
+
+    echo "La carte $carte1 est supérieur à la carte $carte2";
+
+}
+
+elseif($valCarte1 > $valCarte2 || $valCarte1 == 1){
+
+    echo "La carte $carte1 est supérieur à la carte $carte2";
+
+}
 
 dump($valCarte1);
 dump($valCarte2);
